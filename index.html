@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ArtMe</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+  <script src="script.js"></script>
+</head>
+<body>
+  <header>
+    <p class="title">ART<strong>ME</strong></p>
+    <button class="stats-button">Stats</button>
+     <div class="hidden">
+        <div class = "stats-item">
+          <p>Games Played</p>
+          <p>0</p>
+        </div>
+        <div class = "stats-item">
+          <p>Attempts</p>
+          <p>0</p>
+        </div>
+        <div class = "stats-item">
+          <p>Accuracy</p>
+          <p>0%</p>
+        </div>
+      </div>
+  </header>
+
+    <!-- holds the cards to play through your Memory Match game -->
+  <main class = "card-container">
+    <!-- build random cards in script file -->
+  </main>
+
+  <!-- Entry -->
+  <div class="start-modal" id="start-modal">
+        <!-- Modal content-->
+    <div class="start-modal-content">
+      <div class="start-modal-body">
+        <p class="title">ART<strong>ME</strong></p>
+        <div class="entry-image"><img src="images/gallery.jpg" alt=""></div> 
+        <div class="start-bottom">
+          <div class="left-element"></div>
+          <p class="bottom-text">The <strong>Art Me</strong>mory Game</p> 
+          <button class="entry-button">Play</button> 
+        </div>
+      </div>
+    </div>
+  </div>
+
+ <!-- Win -->
+   <div class="modal fade" id="win-modal" role="dialog">
+      <div class="modal-dialog">
+    
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-body">
+            <p>You did it!</p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-default" >Play again?</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
