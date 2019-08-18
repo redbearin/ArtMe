@@ -25,10 +25,35 @@ header .title {
   padding-left: 1%;
   padding-right: 1%;
   font-size: 1.2rem;
-  left: 85vw;
-  top: 3vh;
+  left: 79%;
+  top: 3%;
 }
 
+.stats {
+  position: absolute;
+  color: #E24444;
+  /* padding-top: .4%;
+  padding-bottom: .4%;
+  padding-left: 1%;
+  padding-right: 1%; */
+  font-size: 1rem;
+  left: 84%;
+  top: 2%;
+}
+.stats-item {
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.space {
+  width: 2px;
+}
+
+.rotate {
+  -ms-transform: rotate(-90deg); /* IE 9 */
+  -webkit-transform: rotate(-90deg); /* Safari 3-8 */
+  transform: rotate(-90deg);
+}
 
 .card-container {
   display: flex;
@@ -36,7 +61,8 @@ header .title {
   align-items: flex-start;
   justify-content: space-around;
   justify-content: center;
-  height: 75vh;
+  margin: 2%;
+  height: 75%;
 }
 
 .card-wrapper{
@@ -165,8 +191,8 @@ This is the matching image for the Picasso art piece
 }
 
 .start-modal {
-  height: 100vh;
-  width:100vw;
+  height: 100%;
+  width:100%;
   background-color: white;
   position: absolute;
   top: 0;
@@ -183,7 +209,7 @@ This is the matching image for the Picasso art piece
 
 .start-modal img {
   margin-top: 0;
-  width: 100vw;
+  width: 100%;
 }
 
 .start-modal .bottom-text {
@@ -235,10 +261,31 @@ This is the matching image for the Picasso art piece
   margin-bottom: 4%;
   background-color:#E24444;
   color: white;
+  font-size: 1rem;
   font-size: 18px;
   padding: 2%;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {...} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen 
+and (min-width: 601px) 
+and (max-device-width : 767px) 
+and (orientation : landscape) 
+{
+
+} 
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+
+}
+
 
 /* NOTE: CSS alone solution to flip card. Works with hover. Should also work with click 
 .card:hover .back {

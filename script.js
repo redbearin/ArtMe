@@ -16,10 +16,20 @@ function intializeApp() {
   $('.card').on('click', '.face', handleCardClick);
   $('.modal').on('click', 'button', handleResetGame);
   $('.entry-button').on('click', enterGame);
+  $('.stats-button').on('click', toggleStats);
 }
 
 function enterGame(event) {
   $('.start-modal').addClass('hidden');
+}
+
+function toggleStats(event) {
+  $('.stats').toggle();
+  if ($('.stats-button').hasClass('rotate')){
+    $('.stats-button').removeClass('rotate').addClass('normal');
+  } else {
+    $('.stats-button').removeClass('normal').addClass('rotate');
+  }
 }
 
 function handleCardClick(event){
@@ -86,9 +96,9 @@ function hideSelection(){
 //displays game stats
 function displayStats() {
   var accuracy = calculateAccuracy();
-  $('aside div:nth-of-type(2) p').text(games_played);
-  $('aside div:nth-of-type(4) p').text(attempts);
-  $('aside div:nth-of-type(6) p').text(accuracy);
+  $('.games-played').text(games_played);
+  $('.attempts').text(attempts);
+  $('.accuracy').text(accuracy);
 }
 
 //calculates guessing accuracy
