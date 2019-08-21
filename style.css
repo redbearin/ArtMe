@@ -32,10 +32,6 @@ header .title {
 .stats {
   position: absolute;
   color: #E24444;
-  /* padding-top: .4%;
-  padding-bottom: .4%;
-  padding-left: 1%;
-  padding-right: 1%; */
   font-size: 1rem;
   left: 84%;
   top: 2%;
@@ -58,30 +54,45 @@ header .title {
 .card-container {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
+  /* align-items: flex-start; */
+  /* justify-content: space-around; */
   justify-content: space-around;
-  justify-content: center;
   margin: 2%;
   height: 75%;
+  /* position: relative; */
+  align-content: space-around;
 }
 
 .card-wrapper{
   width: 16.6%;
-  height: 20%;
-  float: left;
+  /* height: 20%; */
+  /* float: left; */
   box-shadow: 5px;
+  /* position: relative; */
+  /* padding: 2%;
+  box-shadow: 5px;
+  position: relative;
+  width: 20%;
+  height: 30%; */
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
 }
 
+
 .card {
-  padding: 2%;
-  top: 10%;
-  left: 5%;
-  /* how do I make these relative to the container */
+  /* padding: 2%; */
+  /* top: 10%; */
+  /* left: 5%; */
   width: 18vh;
   height: 18vh;
   position: relative;
-  float: left; 
-
+  /* float: left; */
+  /* top: 5%;
+  left: 5%;
+  height: 90%;
+  width: 90%;
+  position: absolute; */
 }
 
 .face {
@@ -93,16 +104,6 @@ header .title {
   right: 0;
   height: 100%;
 }
-
-/* CONTENT NOTE: eventually make it so we can match the artist and the artwork. 
-Deactivated for now. 
-.front {
-  background-image: url(http://www.tate.org.uk/art/images/work/T/T05/T05010_10.jpg);
-}
-This is the matching image for the Picasso art piece 
-.front2 { 
-  background-image: url(https://upload.wikimedia.org/wikipedia/commons/9/98/Pablo_picasso_1.jpg);
-} */
 
 .front1 {
   background-image: url("images/dali_photo.jpg");
