@@ -54,45 +54,26 @@ header .title {
 .card-container {
   display: flex;
   flex-wrap: wrap;
-  /* align-items: flex-start; */
-  /* justify-content: space-around; */
+
   justify-content: space-around;
   margin: 2%;
   height: 75%;
-  /* position: relative; */
+
   align-content: space-around;
 }
 
 .card-wrapper{
   width: 16.6%;
-  /* height: 20%; */
-  /* float: left; */
   box-shadow: 5px;
-  /* position: relative; */
-  /* padding: 2%;
-  box-shadow: 5px;
-  position: relative;
-  width: 20%;
-  height: 30%; */
   display: flex;
   justify-content: center;
-  /* align-items: center; */
 }
 
 
 .card {
-  /* padding: 2%; */
-  /* top: 10%; */
-  /* left: 5%; */
   width: 18vh;
   height: 18vh;
   position: relative;
-  /* float: left; */
-  /* top: 5%;
-  left: 5%;
-  height: 90%;
-  width: 90%;
-  position: absolute; */
 }
 
 .face {
@@ -179,7 +160,6 @@ header .title {
  
 
 .back {
-  /* background-image: url("../images/lfz-card.jpg"); */
   position: absolute; 
 }
 
