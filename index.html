@@ -12,21 +12,26 @@
 <body>
   <header>
     <p class="title">ART<strong>ME</strong></p>
-    <button class="stats-button">Stats</button>
-     <div class="hidden">
+    <div class="stats-component-container">
+      <div class="stats-button-container"><button class="stats-button normal">Stats</button></div>
+      <div class="stats hidden">
         <div class = "stats-item">
-          <p>Games Played</p>
-          <p>0</p>
+          <div>Games Played:</div>
+          <div class="space"></div>
+          <div class="games-played">0</div>
         </div>
         <div class = "stats-item">
-          <p>Attempts</p>
-          <p>0</p>
+          <div>Attempts: </div>
+          <div class="space"></div>
+          <div class="attempts">0</div>
         </div>
         <div class = "stats-item">
-          <p>Accuracy</p>
-          <p>0%</p>
+          <div>Accuracy: </div>
+          <div class="space"></div>
+          <div class="accuracy">0%</div>
         </div>
       </div>
+    </div>
   </header>
 
     <!-- holds the cards to play through your Memory Match game -->
@@ -40,7 +45,7 @@
     <div class="start-modal-content">
       <div class="start-modal-body">
         <p class="title">ART<strong>ME</strong></p>
-        <div class="entry-image"><img src="images/gallery.jpg" alt=""></div> 
+        <div class="entry-image"><img src="images/gallery.jpg" alt=""></div>
         <div class="start-bottom">
           <div class="left-element"></div>
           <p class="bottom-text">The <strong>Art Me</strong>mory Game</p> 
