@@ -1,0 +1,293 @@
+body{
+  height: 100vh;
+  position: relative;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+header {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header .title {
+  font-size: 2.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 2%;
+  position: relative;
+}
+
+.stats-button {
+  position: absolute;
+  background-color: #E24444;
+  color: white;
+  padding-top: .4%;
+  padding-bottom: .4%;
+  padding-left: 1%;
+  padding-right: 1%;
+  font-size: 1.2rem;
+  left: 79%;
+  top: 3%;
+}
+
+.stats {
+  position: absolute;
+  color: #E24444;
+  /* padding-top: .4%;
+  padding-bottom: .4%;
+  padding-left: 1%;
+  padding-right: 1%; */
+  font-size: 1rem;
+  left: 84%;
+  top: 2%;
+}
+.stats-item {
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.space {
+  width: 2px;
+}
+
+.rotate {
+  -ms-transform: rotate(-90deg); /* IE 9 */
+  -webkit-transform: rotate(-90deg); /* Safari 3-8 */
+  transform: rotate(-90deg);
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-around;
+  justify-content: center;
+  margin: 2%;
+  height: 75%;
+}
+
+.card-wrapper{
+  width: 16.6%;
+  height: 20%;
+  float: left;
+  box-shadow: 5px;
+}
+
+.card {
+  padding: 2%;
+  top: 10%;
+  left: 5%;
+  /* how do I make these relative to the container */
+  width: 18vh;
+  height: 18vh;
+  position: relative;
+  float: left; 
+
+}
+
+.face {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: black;
+  left: 0;
+  right: 0;
+  height: 100%;
+}
+
+/* CONTENT NOTE: eventually make it so we can match the artist and the artwork. 
+Deactivated for now. 
+.front {
+  background-image: url(http://www.tate.org.uk/art/images/work/T/T05/T05010_10.jpg);
+}
+This is the matching image for the Picasso art piece 
+.front2 { 
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/9/98/Pablo_picasso_1.jpg);
+} */
+
+.front1 {
+  background-image: url("images/dali_photo.jpg");
+}
+
+.front2 {
+  background-image: url("images/kahlo_photo.jpg");
+}
+
+.front3 {
+  background-image: url("images/lichtenstein_photo.jpg");
+}
+
+.front4 {
+  background-image: url("images/matisse_photo.jpg");
+}
+
+.front5 {
+  background-image: url("images/okeeffe_photo.jpg");
+}
+
+.front6 {
+  background-image: url("images/picasso_photo.jpg");
+}
+
+.front7 {
+  background-image: url("images/warhol_photo.jpg");
+}
+
+.front8 {
+  background-image: url("images/guayasamin_photo.jpg");
+}
+
+.front9 {
+  background-image: url("images/rothko_photo.jpg");
+}
+
+.front11 {
+  background-image: url("images/dali_time.jpg");
+}
+
+.front12 {
+  background-image: url("images/kahlo_two_friedas.jpg");
+}
+
+.front13 {
+  background-image: url("images/lichtenstein_painting.jpg");
+}
+
+.front14 {
+  background-image: url("images/matisse_painting.jpg");
+}
+
+.front15 {
+  background-image: url("images/okeeffe_painting.jpg");
+}
+
+.front16 {
+  background-image: url("images/picasso_painting.jpg");
+}
+
+.front17 {
+  background-image: url("images/warhol_marilyn_monroe.jpg");
+}
+
+.front18 {
+  background-image: url("images/guayasamin_painting.jpg");
+}
+
+.front19 {
+  background-image: url("images/rothko_painting.jpg");
+}
+ 
+
+.back {
+  /* background-image: url("../images/lfz-card.jpg"); */
+  position: absolute; 
+}
+
+.start-modal-container{
+  position: relative;
+}
+
+.hidden {
+  display: none;
+}
+
+.start-modal {
+  height: 100%;
+  width:100%;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.start-modal .title {
+  font-size: 2.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: .2%;
+  margin-left: 2%;
+  margin-bottom: 1%;
+}
+
+.start-modal img {
+  margin-top: 0;
+  width: 100%;
+}
+
+.start-modal .bottom-text {
+  font-size: 1.5rem;
+  margin-top: 3%;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.start-bottom {
+  display: flex;
+  flex-direction: row;  
+  justify-content: space-between;         
+}
+
+.left-element {
+  width: 8%;
+  height: 6%;
+  margin-left: 5%;
+}
+
+.entry-button {
+  background-color: #6281D7;
+  color: white;
+  font-size: 1rem;
+  width: 10%;
+  margin-top: 5%;
+  margin-right: 5%;
+}
+
+.modal {
+  width: 30%;
+  position: absolute;
+  left: 49%;
+  top: 42%; 
+  background-color: #b3b2b3;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.modal-body {
+  font-size: 24px;
+  padding: 5px;
+  height: 50%;
+}
+
+.btn-default {
+  margin-bottom: 4%;
+  background-color:#E24444;
+  color: white;
+  font-size: 1rem;
+  font-size: 18px;
+  padding: 2%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {...} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen 
+and (min-width: 601px) 
+and (max-device-width : 767px) 
+and (orientation : landscape) 
+{
+
+} 
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+
+}
+
+
+/* NOTE: CSS alone solution to flip card. Works with hover. Should also work with click 
+.card:hover .back {
+  display: none;
+} */
