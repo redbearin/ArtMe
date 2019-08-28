@@ -9,36 +9,29 @@ header {
 }
 
 header .title {
+  margin-top: 1%;
   font-size: 2.5rem;
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: 2%;
+  margin-bottom: 1%;
+  margin-left: 4%;
   position: relative;
 }
 
-.stats-button {
+.stats-component-container {
+  left: 70%;
+  top: 1%;
   position: absolute;
+  display: flex;
+}
+
+.stats-button {
   background-color: #E24444;
   color: white;
-  padding-top: .4%;
-  padding-bottom: .4%;
-  padding-left: 1%;
-  padding-right: 1%;
-  font-size: 1.2rem;
-  left: 79%;
-  top: 3%;
+  font-size: 1.3rem;
 }
 
 .stats {
-  position: absolute;
   color: #E24444;
-  /* padding-top: .4%;
-  padding-bottom: .4%;
-  padding-left: 1%;
-  padding-right: 1%; */
   font-size: 1rem;
-  left: 84%;
-  top: 2%;
 }
 .stats-item {
   display: flex;
@@ -52,36 +45,32 @@ header .title {
 .rotate {
   -ms-transform: rotate(-90deg); /* IE 9 */
   -webkit-transform: rotate(-90deg); /* Safari 3-8 */
-  transform: rotate(-90deg);
+  transform: translate(0, 15px) rotate(-90deg);
 }
 
 .card-container {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
+
   justify-content: space-around;
-  justify-content: center;
   margin: 2%;
   height: 75%;
+
+  align-content: space-around;
 }
 
 .card-wrapper{
   width: 16.6%;
-  height: 20%;
-  float: left;
   box-shadow: 5px;
+  display: flex;
+  justify-content: center;
 }
 
+
 .card {
-  padding: 2%;
-  top: 10%;
-  left: 5%;
-  /* how do I make these relative to the container */
   width: 18vh;
   height: 18vh;
   position: relative;
-  float: left; 
-
 }
 
 .face {
@@ -93,16 +82,6 @@ header .title {
   right: 0;
   height: 100%;
 }
-
-/* CONTENT NOTE: eventually make it so we can match the artist and the artwork. 
-Deactivated for now. 
-.front {
-  background-image: url(http://www.tate.org.uk/art/images/work/T/T05/T05010_10.jpg);
-}
-This is the matching image for the Picasso art piece 
-.front2 { 
-  background-image: url(https://upload.wikimedia.org/wikipedia/commons/9/98/Pablo_picasso_1.jpg);
-} */
 
 .front1 {
   background-image: url("images/dali_photo.jpg");
@@ -178,7 +157,6 @@ This is the matching image for the Picasso art piece
  
 
 .back {
-  /* background-image: url("../images/lfz-card.jpg"); */
   position: absolute; 
 }
 
@@ -234,7 +212,7 @@ This is the matching image for the Picasso art piece
 .entry-button {
   background-color: #6281D7;
   color: white;
-  font-size: 1rem;
+  font-size: 1.3rem;
   width: 10%;
   margin-top: 5%;
   margin-right: 5%;
@@ -267,24 +245,95 @@ This is the matching image for the Picasso art piece
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {...} 
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
+/* iPhone 4 and 4s Portrait */
 @media only screen 
-and (min-width: 601px) 
-and (max-device-width : 767px) 
-and (orientation : landscape) 
-{
+  and (max-device-width: 320px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    header {
+      margin-top: 5%;
+    }
+    header .title {
+      margin-top: 3%;
+      margin-bottom: 10%;
+    }
+    .stats-component-container {
+      left: 53%;
+      top: 2%;
+    }
+    .stats-button {
+      font-size: 1rem;
+    }
+    .stats {
+      margin-top: 3%;
+      font-size: .7rem;
+    }
+    .card-wrapper{
+      width: 33%;
+    }
+    .card {
+      width: 11.5vh;
+      height: 11.5vh;
+    }
+  } 
 
-} 
-
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : landscape) {
-
+/* iPhone 6, 6s, 7, 8; galaxy S5; iphone X Portrait */
+  @media only screen 
+  and (min-device-width: 321px)
+  and (max-device-width: 375px) 
+  and (orientation: portrait) { 
+    header {
+      margin-top: 5%;
+    }
+    header .title {
+      margin-top: 2%;
+      margin-bottom: 10%;
+    }
+    .stats-component-container {
+      left: 50%;
+    }
+    .stats {
+      margin-top: 3%;
+      font-size: .9rem;
+    }
+    .card-wrapper{
+      width: 33%;
+    }
+    .card {
+      width: 11.5vh;
+      height: 11.5vh;
+    }
 }
+
+/* iPhone 6+, 7+, 8+; pixel2; pixel2xl Portrait */
+@media only screen 
+  and (min-device-width: 376px)
+  and (max-device-width: 414px) 
+  and (orientation: portrait) { 
+
+    header {
+      margin-top: 5%;
+    }
+
+    header .title {
+      margin-top: 1%;
+      margin-bottom: 10%;
+    }
+    .stats-component-container {
+      left: 50%;
+    }
+    .stats {
+      margin-top: 2.5%;
+      font-size: 1rem;
+    }
+    .card-wrapper{
+      width: 33%;
+    }
+    .card {
+      width: 11.5vh;
+      height: 11.5vh;
+    }
+} 
 
 
 /* NOTE: CSS alone solution to flip card. Works with hover. Should also work with click 
