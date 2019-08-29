@@ -469,6 +469,27 @@ header .title {
   and (min-device-width: 737px)
   and (max-device-width: 823px) 
   and (orientation: landscape) { 
+    header .title {
+      margin-top: 3%;
+      width: 75%;
+      margin: auto;
+    }
+    .stats-component-container {
+      left: 63%;
+      top: 2%;
+    }
+    .stats-button {
+      font-size: 1.2rem;
+    }
+    .stats {
+      margin-top: 2.5%;
+      font-size: .9rem;
+    }
+    .card-container {
+      width: 80%;
+      margin: auto;
+      margin-top: 2%;
+    }
     .entry-image-vertical-phone {
       display: none;
     }
@@ -480,5 +501,12 @@ header .title {
     }
     .entry-image-horizontal-phone-x {
       display: block;
+    }
+    .entry-button {
+      font-size: 1.2rem;
+      width: 10%;
+      height: 12%;
+      margin-top: 5%;
+      margin-right: 5%;
     }
 } 
