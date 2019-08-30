@@ -71,8 +71,9 @@ function handleCardClick(event){
 
        //all the cards have been matched
       if(max_matches === matches) {
-        $('#win-modal').show();
         games_played++;
+        displayStats();
+        $('#win-modal').show();
       }
     //two cards are not the same
     } else {
