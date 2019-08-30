@@ -37,11 +37,15 @@ function handleCardClick(event){
     return;
   }
 
+  if($(this).hasClass('locked')) {
+    return;
+  }
+
   //first guess (card clicked)
   if (firstCardClicked === null) {
     firstCardClicked = $(this);
     firstCardClicked.addClass('hidden');
-    firstCardClicked.siblings().addClass('sibling');
+    firstCardClicked.siblings().addClass('visited');
 
   //second guess (second card clicked)
   } else {
@@ -51,8 +55,8 @@ function handleCardClick(event){
     comparingCards = true;
 
     //same card clicked twice
-    if (secondCardClicked.hasClass('sibling')) {
-      secondCardClicked.removeClass('sibling');
+    if (secondCardClicked.hasClass('visited')) {
+      secondCardClicked.removeClass('visited');
       hideSelection();
       comparingCards = false;
       return;
@@ -62,12 +66,17 @@ function handleCardClick(event){
     //
     if($(firstCardClicked).next().attr('id') === $(secondCardClicked).next().attr('id')) {
       console.log('cards match');
+      var artistId = $(secondCardClicked).next().attr('id');
+      audioDescription(artistId);
       matches++;
       displayStats();
-      firstCardClicked.removeClass('sibling');
+      $(firstCardClicked).siblings().addClass('locked');
+      $(secondCardClicked).siblings().addClass('locked');
+      firstCardClicked.removeClass('visited');
       firstCardClicked = null;
       secondCardClicked = null;
       comparingCards = false;
+
 
        //all the cards have been matched
       if(max_matches === matches) {
@@ -124,6 +133,42 @@ function handleResetGame(){
   $('#win-modal').hide();
   $('.back').removeClass('hidden');
   resetStats();
+  for (var i = 1; i <=9; i++ ) {
+    var myid = '#front' + i;
+    $(myid).removeClass('locked');
+  }
+}
+
+function audioDescription(artistId) {
+  var audio;
+  if (artistId === 'front1') {
+    audio = new Audio('audio/dali.mp3');
+  }
+  if (artistId === 'front2') {
+    audio = new Audio('audio/kahlo.mp3');
+  }
+  if (artistId === 'front3') {
+    audio = new Audio('audio/lichtenstein.mp3');
+  }
+  if (artistId === 'front4') {
+    audio = new Audio('audio/matisse.mp3');
+  }
+  if (artistId === 'front5') {
+    audio = new Audio('audio/okeeffe.mp3');
+  }
+  if (artistId === 'front6') {
+    var audio = new Audio('audio/picasso.mp3');
+  }
+  if (artistId === 'front7') {
+    audio = new Audio('audio/warhol.mp3');
+  }
+  if (artistId === 'front8') {
+    audio = new Audio('audio/guayasamin.mp3');
+  }
+  if (artistId === 'front9') {
+    audio = new Audio('audio/rothko.mp3');
+  }
+  audio.play();
 }
 
 //shuffles card order
