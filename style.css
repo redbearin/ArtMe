@@ -51,11 +51,9 @@ header .title {
 .card-container {
   display: flex;
   flex-wrap: wrap;
-
   justify-content: space-around;
   margin: 2%;
   height: 75%;
-
   align-content: space-around;
 }
 
@@ -321,7 +319,7 @@ header .title {
       margin-bottom: 10%;
     }
     .stats-component-container {
-      left: 50%;
+      left: 48%;
     }
     .stats {
       margin-top: 3%;
@@ -354,17 +352,20 @@ header .title {
     .entry-button {
       width: 20%;
       margin-top: 0;
-      margin-right: 0;
+      /* margin-right: 0; */
+    }
+    .modal {
+      width: 70%;
     }
 }
 
-/* iPhone 6+, 7+, 8+; pixel2; pixel2xl Portrait */
+/* iPhone 6+, 7+, 8+; pixel2; pixel2xl, iPhoneX Portrait */
 @media only screen 
   and (min-device-width: 376px)
   and (max-device-width: 414px) 
   and (orientation: portrait) { 
     header {
-      margin-top: 5%;
+      margin-top: 7%;
     }
     header .title {
       margin-top: 1%;
@@ -404,7 +405,77 @@ header .title {
     .entry-button {
       width: 20%;
       margin-top: 0;
-      margin-right: 0;
+      /* margin-right: 0; */
+    }
+    .modal {
+      width: 70%;
+    }
+} 
+
+/* iPad Portrait */
+@media only screen 
+  and (min-device-width: 415px)
+  and (max-device-width: 768px) 
+  and (orientation: portrait) { 
+    header {
+      margin-top: 5%;
+      margin-left: 5%;
+    }
+    header .title {
+      margin-top: 1%;
+      margin-bottom: 13%;
+    }
+    .stats-component-container {
+      left: 65%;
+    }
+    .stats {
+      margin-top: 2.5%;
+      font-size: 1rem;
+    } 
+    .card-wrapper{
+      width: 33%;
+      margin-top: 1%;
+      margin-bottom: 1%;
+    }
+    .card {
+      width: 13vh;
+      height: 13vh;
+    }
+    .modal {
+      width: 50%;
+    }
+} 
+/* iPad Pro Portrait */
+@media only screen 
+  and (min-device-width: 769px)
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) { 
+    header {
+      margin-top: 5%;
+      margin-left: 5%;
+    }
+    header .title {
+      margin-top: 1%;
+      margin-bottom: 13%;
+    }
+    .stats-component-container {
+      left: 70%;
+    }
+    .stats {
+      margin-top: 2.5%;
+      font-size: 1rem;
+    } 
+    .card-wrapper{
+      width: 33%;
+      margin-top: 1%;
+      margin-bottom: 1%;
+    }
+    .card {
+      width: 13vh;
+      height: 13vh;
+    }
+    .modal {
+      width: 50%;
     }
 } 
 @media only screen 
@@ -435,16 +506,19 @@ header .title {
       display: none;
     }
     .entry-image-horizontal-phone-x {
-      display: block;
+      display: none;
     }
     .entry-image-horizontal-phone {
-      display: none;
+      display: block;
     }
     .entry-button {
       font-size: 1.2rem;
       width: 15%;
       height: 12%;
       margin-top: 7%;
+    }
+    .modal {
+      width: 70%;
     }
 } 
 
@@ -507,6 +581,6 @@ header .title {
       width: 10%;
       height: 12%;
       margin-top: 5%;
-      margin-right: 5%;
+      /* margin-right: 5%; */
     }
 } 
