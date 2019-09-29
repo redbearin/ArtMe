@@ -4,7 +4,7 @@ $(document).ready(intializeApp);
 var firstCardClicked = null;
 var secondCardClicked = null;
 var matches = null;
-var max_matches = 2;
+var max_matches = 4;
 var attempts = null;
 var games_played = 0;
 var comparingCards = false;
@@ -23,6 +23,7 @@ function enterGame(event) {
   $('.start-modal').addClass('hidden');
 }
 
+//show or hide stats
 function toggleStats(event) {
   $('.stats').toggle();
   if ($('.stats-button').hasClass('rotate')){
@@ -32,6 +33,7 @@ function toggleStats(event) {
   }
 }
 
+//process a card click
 function handleCardClick(event){
   if (comparingCards) {
     return;
@@ -63,9 +65,7 @@ function handleCardClick(event){
     }
 
     //two cards are the same
-    //
     if($(firstCardClicked).next().attr('id') === $(secondCardClicked).next().attr('id')) {
-      console.log('cards match');
       var artistId = $(secondCardClicked).next().attr('id');
       audioDescription(artistId);
       matches++;
@@ -82,11 +82,10 @@ function handleCardClick(event){
       if(max_matches === matches) {
         games_played++;
         displayStats();
-        $('#win-modal').show();
+        $('#win-modal').delay(5000).fadeIn(0);
       }
     //two cards are not the same
     } else {
-      console.log('cards do not match');
       setTimeout(hideSelection, 1500); 
       displayStats();
     }
@@ -97,7 +96,7 @@ function handleCardClick(event){
 function hideSelection(){
   $(firstCardClicked).removeClass('hidden');
   $(secondCardClicked).removeClass('hidden');
-  //returns cards to initial position with person's face hidden
+  //returns cards to initial position with artist or painting hidden
   firstCardClicked = null;
   secondCardClicked = null;
   comparingCards = false;
@@ -139,6 +138,7 @@ function handleResetGame(){
   }
 }
 
+//audio descriptions of paintings
 function audioDescription(artistId) {
   var audio;
   if (artistId === 'front1') {

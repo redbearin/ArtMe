@@ -27,12 +27,19 @@ header .title {
   background-color: #E24444;
   color: white;
   font-size: 1.3rem;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+button {
+  padding: 1px 4px 2px;
 }
 
 .stats {
   color: #E24444;
   font-size: 1rem;
 }
+
 .stats-item {
   display: flex;
   font-family: Arial, Helvetica, sans-serif;
@@ -59,11 +66,9 @@ header .title {
 
 .card-wrapper{
   width: 16.6%;
-  box-shadow: 5px;
   display: flex;
   justify-content: center;
 }
-
 
 .card {
   width: 18vh;
@@ -76,6 +81,7 @@ header .title {
   background-position: center;
   background-repeat: no-repeat;
   background-color: black;
+  box-shadow: 0 4px 8px 0 rbga(0,0,0,10);
   left: 0;
   right: 0;
   height: 100%;
@@ -153,7 +159,6 @@ header .title {
   background-image: url("images/rothko_painting.jpg");
 }
  
-
 .back {
   position: absolute; 
 }
@@ -319,11 +324,14 @@ header .title {
       margin-bottom: 10%;
     }
     .stats-component-container {
-      left: 48%;
+      left: 47%;
+    }
+    .stats-button {
+      font-size: 1.1rem;
     }
     .stats {
       margin-top: 3%;
-      font-size: .9rem;
+      font-size: .85rem;
     }
     .card-wrapper{
       width: 33%;
@@ -347,19 +355,19 @@ header .title {
     .start-bottom {
       flex-direction: column;  
       align-items: center; 
-      justify-content: flex-start;       */
+      justify-content: flex-start;      
     }
     .entry-button {
       width: 20%;
       margin-top: 0;
-      /* margin-right: 0; */
+      margin-right: 0;
     }
     .modal {
       width: 70%;
     }
 }
 
-/* iPhone 6+, 7+, 8+; pixel2; pixel2xl, iPhoneX Portrait */
+/* iPhone 6+, 7+, 8+; pixel2; pixel2xl Portrait */
 @media only screen 
   and (min-device-width: 376px)
   and (max-device-width: 414px) 
@@ -372,7 +380,7 @@ header .title {
       margin-bottom: 10%;
     }
     .stats-component-container {
-      left: 50%;
+      left: 48%;
     }
     .stats {
       margin-top: 2.5%;
@@ -405,7 +413,6 @@ header .title {
     .entry-button {
       width: 20%;
       margin-top: 0;
-      /* margin-right: 0; */
     }
     .modal {
       width: 70%;
@@ -581,6 +588,5 @@ header .title {
       width: 10%;
       height: 12%;
       margin-top: 5%;
-      /* margin-right: 5%; */
     }
 } 
